@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Área Docente | Dolce Vita</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="teacher-page">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>Dolce</span> Vita
+            </a>
+
+            <a href="index.html" class="btn btn-secondary">
+                ← Volver al sitio
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= ACCESO ================= -->
+
+        <section
+            id="loginSection"
+            class="teacher-login">
+
+            <div class="login-box">
+
+                <span class="eyebrow">
+                    ÁREA RESTRINGIDA
+                </span>
+
+                <h1>
+                    Documentación
+                    <span>docente</span>
+                </h1>
+
+                <p>
+                    Esta sección contiene información técnica y académica
+                    sobre el desarrollo del sitio web Dolce Vita.
+                </p>
+
+
+                <form id="teacherLogin">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Ingresá la contraseña"
+                        required>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+                        Ingresar →
+                    </button>
+
+                    <p
+                        id="loginMessage"
+                        class="login-message">
+                    </p>
+
+                </form>
+
+
+                <small>
+                    Acceso académico básico.
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DOCUMENTACIÓN ================= -->
+
+        <section
+            id="documentation"
+            class="documentation"
+            hidden>
+
+            <div class="documentation-header">
+
+                <span class="eyebrow">
+                    DOLCE VITA · DOCUMENTACIÓN
+                </span>
+
+                <h1>
+                    Información técnica
+                </h1>
+
+                <p>
+                    Documentación del proyecto web y justificación
+                    de las decisiones tomadas durante su desarrollo.
+                </p>
+
+                <button
+                    id="logoutButton"
+                    class="btn btn-secondary">
+                    Cerrar sesión
+                </button>
+
+            </div>
+
+
+            <!-- ================= HTML ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">01</span>
+
+                <h2>
+                    Estructura semántica HTML5
+                </h2>
+
+                <p>
+                    El sitio utiliza etiquetas semánticas de HTML5
+                    para organizar correctamente el contenido y
+                    facilitar su comprensión.
+                </p>
+
+
+                <div class="tag-list">
+
+                    <div class="tag-item">
+
+                        <strong>&lt;header&gt;</strong>
+
+                        <p>
+                            Se utiliza en la parte superior de la página
+                            para contener la identidad de Dolce Vita
+                            y la navegación principal.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tag-item">
+
+                        <strong>&lt;nav&gt;</strong>
+
+                        <p>
+                            Contiene los enlaces de navegación que
+                            permiten desplazarse entre las distintas
+                            secciones de la One-Page.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tag-item">
+
+                        <strong>&lt;main&gt;</strong>
+
+                        <p>
+                            Contiene el contenido principal de la página,
+                            diferenciándolo de la navegación y del pie
+                            de página.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tag-item">
+
+                        <strong>&lt;section&gt;</strong>
+
+                        <p>
+                            Divide el contenido en bloques temáticos:
+                            inicio, historia, especialidades, experiencia,
+                            italiano y contacto.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tag-item">
+
+                        <strong>&lt;article&gt;</strong>
+
+                        <p>
+                            Se utiliza para contenidos independientes,
+                            como las tarjetas de productos, etapas de
+                            trabajo e información histórica.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tag-item">
+
+                        <strong>&lt;footer&gt;</strong>
+
+                        <p>
+                            Contiene información final del sitio,
+                            enlaces secundarios y los datos del proyecto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= CSS ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">02</span>
+
+                <h2>
+                    CSS y diseño visual
+                </h2>
+
+                <p>
+                    El diseño se realizó mediante CSS3, utilizando
+                    diferentes herramientas para conseguir una
+                    interfaz moderna, responsive e interactiva.
+                </p>
+
+
+                <div class="technical-grid">
+
+                    <div>
+
+                        <h3>CSS</h3>
+
+                        <p>
+                            Se utiliza una hoja de estilos externa
+                            llamada <strong>style.css</strong>.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>Flexbox</h3>
+
+                        <p>
+                            Se utiliza para organizar elementos como
+                            la navegación, botones, información de
+                            contacto y diferentes componentes.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>CSS Grid</h3>
+
+                        <p>
+                            Se utiliza para crear estructuras de
+                            columnas, como las tarjetas de productos
+                            y la sección de contacto.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>Media Queries</h3>
+
+                        <p>
+                            Permiten adaptar el sitio a celulares,
+                            tablets y computadoras mediante diferentes
+                            tamaños de pantalla.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>Variables CSS</h3>
+
+                        <p>
+                            Se utilizan variables para mantener
+                            organizados colores, fondos, bordes,
+                            sombras y otros valores del diseño.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>Animaciones</h3>
+
+                        <p>
+                            Se incorporaron transiciones, efectos
+                            hover y animaciones de aparición para
+                            mejorar la experiencia del usuario.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================= JAVASCRIPT ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">03</span>
+
+                <h2>
+                    JavaScript e interactividad
+                </h2>
+
+                <p>
+                    JavaScript permite que diferentes elementos del
+                    sitio reaccionen a las acciones del usuario.
+                </p>
+
+
+                <ul class="documentation-list">
+
+                    <li>
+                        Cambio entre modo claro y modo oscuro.
+                    </li>
+
+                    <li>
+                        Menú responsive para dispositivos móviles.
+                    </li>
+
+                    <li>
+                        Indicador de sección activa en la navegación.
+                    </li>
+
+                    <li>
+                        Ventana modal para consultar información
+                        de los productos.
+                    </li>
+
+                    <li>
+                        Botones para mostrar y ocultar información.
+                    </li>
+
+                    <li>
+                        Formulario interactivo de consultas.
+                    </li>
+
+                    <li>
+                        Animaciones al desplazarse por la página.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- ================= ARQUITECTURA ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">04</span>
+
+                <h2>
+                    Arquitectura One-Page
+                </h2>
+
+                <p>
+                    Se decidió utilizar una arquitectura One-Page
+                    para presentar toda la información principal
+                    de Dolce Vita dentro de una única página.
+                </p>
+
+                <p>
+                    La navegación utiliza enlaces internos mediante
+                    identificadores, permitiendo que el usuario pueda
+                    desplazarse rápidamente entre las diferentes
+                    secciones.
+                </p>
+
+                <p>
+                    Esta estructura resulta adecuada para una
+                    pastelería porque permite mostrar la identidad,
+                    historia, productos, experiencia y contacto
+                    sin obligar al usuario a cambiar constantemente
+                    de página.
+                </p>
+
+            </article>
+
+
+            <!-- ================= RECURSOS ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">05</span>
+
+                <h2>
+                    Recursos externos
+                </h2>
+
+                <p>
+                    El sitio utiliza recursos externos para mejorar
+                    la presentación visual.
+                </p>
+
+                <ul class="documentation-list">
+
+                    <li>
+                        Google Fonts para las tipografías.
+                    </li>
+
+                    <li>
+                        Imágenes externas utilizadas como fotografías
+                        de referencia de productos.
+                    </li>
+
+                    <li>
+                        HTML, CSS y JavaScript como tecnologías
+                        principales del proyecto.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- ================= BILINGÜE ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">06</span>
+
+                <h2>
+                    Identidad bilingüe
+                </h2>
+
+                <p>
+                    El sitio combina español e italiano para reforzar
+                    la identidad de la marca y relacionarla con la
+                    tradición de la pastelería italiana.
+                </p>
+
+                <p>
+                    Los nombres de algunos productos, títulos y
+                    expresiones utilizan italiano, mientras que
+                    la información principal permanece en español
+                    para facilitar la comprensión del usuario.
+                </p>
+
+            </article>
+
+
+            <!-- ================= UX ================= -->
+
+            <article class="documentation-card">
+
+                <span class="doc-number">07</span>
+
+                <h2>
+                    Experiencia de usuario
+                </h2>
+
+                <p>
+                    Se buscó que los elementos que parecen botones
+                    realmente tengan una función.
+                </p>
+
+                <ul class="documentation-list">
+
+                    <li>
+                        Los botones de productos abren información
+                        adicional.
+                    </li>
+
+                    <li>
+                        Los llamados a realizar pedidos llevan
+                        al formulario de contacto.
+                    </li>
+
+                    <li>
+                        El menú permite desplazarse entre las secciones.
+                    </li>
+
+                    <li>
+                        El botón de tema cambia el aspecto visual.
+                    </li>
+
+                    <li>
+                        El formulario permite realizar una consulta
+                        de manera interactiva.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- ================= AVISO ================= -->
+
+            <div class="academic-note">
+
+                <strong>Nota académica:</strong>
+
+                <p>
+                    La contraseña de esta sección es una protección
+                    básica implementada mediante JavaScript para
+                    fines educativos. Al tratarse de un sitio estático
+                    publicado en GitHub Pages, no constituye un sistema
+                    de autenticación seguro para información privada.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    <span>Dolce</span> Vita
+                </a>
+
+                <p>
+                    Documentación académica del proyecto.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="docente.js"></script>
+
+</body>
+
+</html>
