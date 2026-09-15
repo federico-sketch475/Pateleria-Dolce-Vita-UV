@@ -1,0 +1,1632 @@
+/* ==================================================
+   DOLCE VITA
+   STYLE.CSS
+================================================== */
+
+
+/* ================= VARIABLES ================= */
+
+:root {
+
+    --bg: #f8f4ed;
+    --bg-secondary: #fffdf9;
+
+    --text: #2d2521;
+    --text-light: #766b64;
+
+    --accent: #9b5544;
+    --accent-dark: #713a2f;
+
+    --cream: #eee1d0;
+    --border: #ded3c6;
+
+    --white: #ffffff;
+
+    --shadow: 0 15px 45px rgba(45, 37, 33, 0.10);
+
+    --transition: 0.3s ease;
+
+}
+
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+
+    --bg: #211b18;
+    --bg-secondary: #2b2420;
+
+    --text: #f8f2eb;
+    --text-light: #c5b9af;
+
+    --accent: #d58b73;
+    --accent-dark: #e5a18b;
+
+    --cream: #3a302a;
+    --border: #51443c;
+
+    --white: #2b2420;
+
+    --shadow: 0 15px 45px rgba(0, 0, 0, 0.30);
+
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.6;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(248, 244, 237, 0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+body.dark .navbar {
+    background: rgba(33, 27, 24, 0.92);
+}
+
+
+.nav-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 78px;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.logo {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--text-light);
+
+    padding: 8px 0;
+
+    transition: var(--transition);
+
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+
+    color: var(--accent);
+
+}
+
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--accent);
+
+    transition: var(--transition);
+
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    width: 100%;
+
+}
+
+
+.nav-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.theme-button,
+.menu-button {
+
+    border: 1px solid var(--border);
+
+    background: var(--bg-secondary);
+
+    color: var(--text);
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    transition: var(--transition);
+
+}
+
+
+.theme-button:hover,
+.menu-button:hover {
+
+    background: var(--accent);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+.menu-button {
+    display: none;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 140px 25px 90px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.eyebrow {
+
+    display: inline-block;
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero h1 {
+
+    max-width: 750px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.02;
+
+    font-weight: 600;
+
+    margin-bottom: 28px;
+
+}
+
+
+.hero h1 span,
+.section-heading h2 span,
+.italian-content h2 span {
+
+    color: var(--accent);
+
+    font-style: italic;
+
+}
+
+
+.hero p {
+
+    max-width: 620px;
+
+    color: var(--text-light);
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    border-radius: 5px;
+
+    border: 1px solid transparent;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.btn-primary {
+
+    background: var(--accent);
+
+    color: white;
+
+    box-shadow: 0 10px 25px rgba(155, 85, 68, 0.20);
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--accent-dark);
+
+}
+
+
+.btn-secondary {
+
+    border-color: var(--border);
+
+    background: var(--bg-secondary);
+
+    color: var(--text);
+
+}
+
+
+.btn-secondary:hover {
+
+    border-color: var(--accent);
+
+    color: var(--accent);
+
+}
+
+
+.btn-light {
+
+    background: white;
+
+    color: #2d2521;
+
+}
+
+
+.btn-light:hover {
+
+    background: #f2e9dd;
+
+}
+
+
+/* ================= HERO DECORATION ================= */
+
+.hero-decoration {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.cake-circle {
+
+    width: min(430px, 75vw);
+    height: min(430px, 75vw);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #fff8ed 0,
+            #ead6bd 48%,
+            #c28b70 100%
+        );
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--shadow);
+
+    animation: floating 5s ease-in-out infinite;
+
+}
+
+
+.cake-icon {
+
+    font-size: 150px;
+
+    filter: drop-shadow(
+        0 15px 15px rgba(45, 37, 33, 0.20)
+    );
+
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 110px 25px;
+
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-heading p {
+
+    color: var(--text-light);
+
+    font-size: 17px;
+
+}
+
+
+/* ================= HISTORY ================= */
+
+.history-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.history-card {
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border);
+
+    padding: 35px;
+
+    min-height: 270px;
+
+    transition: var(--transition);
+
+}
+
+
+.history-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow);
+
+    border-color: var(--accent);
+
+}
+
+
+.number {
+
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+
+}
+
+
+.history-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.history-card p {
+
+    color: var(--text-light);
+
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products-section {
+
+    background: var(--bg-secondary);
+
+    max-width: none;
+
+    padding-left: max(25px, calc((100% - 1150px) / 2));
+
+    padding-right: max(25px, calc((100% - 1150px) / 2));
+
+}
+
+
+.products-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.product-card {
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.product-image {
+
+    height: 280px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.product-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.product-card:hover .product-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+.product-tag {
+
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    background: white;
+
+    color: var(--accent);
+
+    padding: 7px 12px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.product-content {
+
+    padding: 28px;
+
+}
+
+
+.product-number {
+
+    color: var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.product-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin: 7px 0 10px;
+
+}
+
+
+.product-content p {
+
+    color: var(--text-light);
+
+    margin-bottom: 25px;
+
+}
+
+
+.product-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.product-bottom strong {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+
+}
+
+
+.details-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--accent);
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.details-button:hover {
+
+    transform: translateX(5px);
+
+}
+
+
+.center-button {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.experience-section {
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 90px;
+
+    align-items: start;
+
+}
+
+
+.experience-section .section-heading {
+
+    margin-bottom: 0;
+
+}
+
+
+.steps {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.step {
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.step:first-child {
+
+    border-top: 1px solid var(--border);
+
+}
+
+
+.step-icon {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: var(--cream);
+
+    color: var(--accent);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+
+}
+
+
+.step h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.step p {
+
+    color: var(--text-light);
+
+}
+
+
+/* ================= ITALIAN ================= */
+
+.italian-section {
+
+    background: var(--accent);
+
+    color: white;
+
+    padding: 100px 25px;
+
+}
+
+
+.italian-content {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.italian-section .eyebrow {
+
+    color: #f7ddce;
+
+}
+
+
+.italian-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+}
+
+
+.italian-content h2 span {
+
+    color: #f7ddce;
+
+}
+
+
+.italian-content > p {
+
+    max-width: 650px;
+
+    margin: 0 auto 20px;
+
+    font-size: 18px;
+
+}
+
+
+.italian-extra {
+
+    display: none;
+
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+}
+
+
+.italian-extra.visible {
+
+    display: block;
+
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+}
+
+
+.contact-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+
+}
+
+
+.info-icon {
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: var(--cream);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+.info-item h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+}
+
+
+.info-item p {
+
+    color: var(--text-light);
+
+}
+
+
+.info-button {
+
+    align-self: flex-start;
+
+    margin-top: 10px;
+
+}
+
+
+.local-extra {
+
+    display: none;
+
+    padding: 20px;
+
+    background: var(--cream);
+
+    border-left: 3px solid var(--accent);
+
+}
+
+
+.local-extra.visible {
+
+    display: block;
+
+}
+
+
+/* ================= FORM ================= */
+
+.contact-form {
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border);
+
+    padding: 35px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.contact-form h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 18px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    border-radius: 4px;
+
+    outline: none;
+
+    transition: var(--transition);
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 3px rgba(155, 85, 68, 0.10);
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-button {
+
+    width: 100%;
+
+    border: none;
+
+}
+
+
+.form-message {
+
+    margin-top: 15px;
+
+    color: var(--accent);
+
+    font-weight: 600;
+
+}
+
+
+/* ================= TEACHER ================= */
+
+.teacher-section {
+
+    max-width: 1150px;
+
+    margin: 0 auto 90px;
+
+    padding: 55px;
+
+    background: var(--accent);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.teacher-section .eyebrow {
+
+    color: #f7ddce;
+
+}
+
+
+.teacher-section h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.teacher-section p {
+
+    max-width: 650px;
+
+    color: #f8e9df;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    border-top: 1px solid var(--border);
+
+    padding: 50px 25px 25px;
+
+}
+
+
+.footer-content {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.footer-logo {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-content p {
+
+    color: var(--text-light);
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+}
+
+
+.footer-links a {
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    transition: var(--transition);
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--accent);
+
+}
+
+
+.footer-bottom {
+
+    max-width: 1150px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 13px;
+
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.60);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 2000;
+
+}
+
+
+.modal.visible {
+
+    display: flex;
+
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    max-width: 550px;
+
+    width: 100%;
+
+    background: var(--bg-secondary);
+
+    color: var(--text);
+
+    padding: 45px;
+
+    box-shadow: var(--shadow);
+
+    animation: modalIn 0.3s ease;
+
+}
+
+
+@keyframes modalIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.modal-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.modal-content p {
+
+    color: var(--text-light);
+
+    margin-bottom: 30px;
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 32px;
+
+    line-height: 1;
+
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--bg-secondary);
+
+        border-bottom: 1px solid var(--border);
+
+        padding: 20px 25px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+    }
+
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+
+    .menu-button {
+        display: block;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 45px;
+
+    }
+
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .history-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .experience-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 80px 20px;
+    }
+
+
+    .products-section {
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-image {
+
+        height: 250px;
+
+    }
+
+
+    .teacher-section {
+
+        margin: 0 20px 70px;
+
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .teacher-section h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+    }
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .modal-content {
+
+        padding: 35px 25px;
+
+    }
+
+}
